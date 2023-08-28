@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@import "variables", "mixin", "fonts", "reset", "main", "contents";
+@import "variables", "mixin", "fonts", "reset", "main", "contents", "about_jiff",
+  "community";
 
 // comm.scss -
 // 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
@@ -386,7 +387,6 @@ main {
 }
 .short_cut_btn {
   padding-top: 30px;
-
   display: inline-block;
   border-bottom: 1px solid $txt;
   color: $txt;
@@ -580,6 +580,7 @@ main {
 
   .etc-link {
     position: relative;
+    width: 48%;
     .notice-wrap-tit {
       font-size: 34px;
       font-weight: 900;
@@ -589,8 +590,8 @@ main {
     .etc-btn {
       position: absolute;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50px);
+      right: 15px;
+      // transform: translateX(-50px);
       font-size: 14px;
       font-weight: 400;
       &::after {
@@ -767,6 +768,7 @@ main {
   justify-content: space-between;
   width: 80%;
   height: 100px;
+  margin-bottom: 100px;
   .s-a_sec {
     width: 48%;
     height: 100px;
@@ -789,14 +791,14 @@ main {
         margin-left: 0;
       }
       a {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         img {
-          width: 90%;
-          height: 90%;
+          // width: 100%;
+          height: 80%;
           object-fit: cover;
         }
       }

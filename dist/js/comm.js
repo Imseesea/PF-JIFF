@@ -4,6 +4,10 @@ var swiper = new Swiper(".swiper-intro", {
     el: ".swiper-pagination",
     type: "fraction",
   },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -14,6 +18,10 @@ var swiper = new Swiper(".swiper-news", {
   slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",
@@ -33,9 +41,9 @@ var swiper = new Swiper(".swiper-sponsor", {
   spaceBetween: 20,
   loop: true,
   autoplay: {
-delay: 2500,
-disableOnInteraction: false,
-},
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
