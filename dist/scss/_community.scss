@@ -1,4 +1,4 @@
-.notice-wrap {
+.community-wrap {
   .notice-box {
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
           // line-height: 30;
           // padding: 0 10px;
           float: left;
-          font-size: 24px;
+          font-size: 22px;
           line-height: inherit;
           width: 80%;
           background: transparent !important;
@@ -95,39 +95,62 @@
   }
 }
 .brd-paging_number {
+  margin-bottom: 100px;
   .brd-number {
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     box-sizing: border-box;
     align-items: center;
-    width: 100px;
+    position: relative;
+  }
+  .btn__prev {
+    margin-right: 20px;
     &::before {
       content: "\f30a";
-      font-family: "Line Awesome Free";
-      font-weight: 900;
     }
   }
   .btn__next {
+    margin-left: 20px;
     &::before {
       content: "\f30b";
-      font-family: "Line Awesome Free";
-      font-weight: 900;
     }
   }
   a {
+    position: relative;
+    display: block;
     width: 100%;
     display: inline-block;
     padding: 8px 16px;
-    &:hover {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    // height: 40px;
+    // float: left;
+    &::before {
+      position: absolute;
+      top: 8px;
+      left: 12px;
+      padding: 0;
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+    }
+    &:nth-child(2) {
+      background-color: $p-btn2;
       color: $tit;
     }
-    .bd-btn {
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      box-sizing: border-box;
-      background: $bg;
+    &:nth-child(11) {
+      padding: 8px 12.5px;
+    }
+    &:hover {
+      color: $tit;
+      background-color: $p-btn;
+    }
+    &:active {
+      background-color: $p-btn2;
+      color: $w;
+      // box-sizing: border-box;
+      // border-radius: 50%;
     }
   }
 }

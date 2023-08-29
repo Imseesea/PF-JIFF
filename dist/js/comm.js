@@ -1,5 +1,6 @@
 var swiper = new Swiper(".swiper-intro", {
   loop: true,
+  speed: 1000,
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",
@@ -18,10 +19,10 @@ var swiper = new Swiper(".swiper-news", {
   slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",
@@ -39,7 +40,9 @@ var swiper = new Swiper(".swiper-news", {
 var swiper = new Swiper(".swiper-sponsor", {
   slidesPerView: 7,
   spaceBetween: 20,
+  slidesPerGroup: 3,
   loop: true,
+  loopAdditionalSlides: 1,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
@@ -47,5 +50,24 @@ var swiper = new Swiper(".swiper-sponsor", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+});
+
+var swiper = new Swiper(".mV-thumb", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".mV-thumb2", {
+  loop: true,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
   },
 });

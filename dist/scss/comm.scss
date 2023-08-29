@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import "variables", "mixin", "fonts", "reset", "main", "contents", "about_jiff",
-  "community";
+  "community", "movieView";
 
 // comm.scss -
 // 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
@@ -11,6 +11,10 @@
 }
 .container {
   padding: 0 $bothMargin;
+}
+
+:root {
+  --swiper-theme-color: red;
 }
 
 .swiper {
@@ -381,16 +385,16 @@ main {
     // margin-bottom: 42px;
     padding-top: 30px;
     font-size: 16px;
-    font-weight: 500;
-    color: $txt;
+    font-weight: 400;
+    color: $tit;
   }
 }
 .short_cut_btn {
   padding-top: 30px;
   display: inline-block;
-  border-bottom: 1px solid $txt;
-  color: $txt;
-  font-weight: 500;
+  border-bottom: 1px solid $tit;
+  color: $tit;
+  font-weight: 400;
   &::after {
     content: "\f30b";
     font-family: "Line Awesome Free";
@@ -577,21 +581,30 @@ main {
 
 .notice-wrap {
   margin-top: 100px;
-
-  .etc-link {
+  display: flex;
+  justify-content: space-between;
+  .notice-wrap-tit {
+    // margin-bottom: 20px;
+    font-size: 34px;
+    font-weight: 900;
+    color: $tit;
+    margin-bottom: 30px;
+  }
+  .col {
     position: relative;
     width: 48%;
-    .notice-wrap-tit {
-      font-size: 34px;
-      font-weight: 900;
-      color: $tit;
-      margin-bottom: 30px;
-    }
+  }
+  .box {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: $bg;
+    padding: 25px;
+    position: relative;
     .etc-btn {
       position: absolute;
-      bottom: 0;
+      top: -67px;
       right: 15px;
-      // transform: translateX(-50px);
       font-size: 14px;
       font-weight: 400;
       &::after {
@@ -604,20 +617,6 @@ main {
         // bottom: 0;
         // right: -17px;
       }
-    }
-  }
-  .notice-cs {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .etc-wrap {
-      // height: 200px;
-      width: 48%;
-      box-sizing: border-box;
-      border-radius: 8px;
-      background-color: $bg;
-      padding: 25px;
     }
   }
 }
@@ -643,12 +642,13 @@ main {
       font-weight: 500;
     }
     p {
-      font-weight: 500;
+      font-weight: 300;
+      font-size: 14px;
     }
   }
 }
 
-.cs {
+.cs-wrap {
   height: 210px;
   .cs-number {
     p {
@@ -665,30 +665,33 @@ main {
     }
   }
   .cs-time {
-    color: $txt;
-    font-size: 16px;
+    color: $tit;
+    // font-size: 16px;
     margin-top: 20px;
+
     strong {
       font-weight: 500;
+      font-size: 18px;
       position: relative;
       padding-left: 24px;
       &::before {
         position: absolute;
-        top: -5px;
+        top: -7px;
         left: 0;
         content: "\f017";
         font-family: "Line Awesome Free";
         font-weight: 900;
-        font-size: 20px;
+        font-size: 24px;
       }
     }
     span {
-      font-weight: 500;
+      font-weight: 700;
+      font-size: 24px;
       margin-left: 10px;
     }
   }
   .cs-btn {
-    margin-top: 32px;
+    margin-top: 27px;
     display: flex;
     // justify-content: space-between;
     align-items: center;
