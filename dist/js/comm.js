@@ -55,17 +55,34 @@ var swiper = new Swiper(".swiper-sponsor", {
 
 var swiper = new Swiper(".mV-thumb", {
   loop: true,
-  spaceBetween: 10,
-  slidesPerView: 4,
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
+  spaceBetween: 15,
+  slidesPerView: 3,
+  slidesPerGroup: 1,
   freeMode: true,
   watchSlidesProgress: true,
 });
 var swiper2 = new Swiper(".mV-thumb2", {
   loop: true,
-  spaceBetween: 10,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  spaceBetween: 15,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".mv-pagination .swiper-button-next",
+    prevEl: ".mv-pagination .swiper-button-prev",
+  },
+  pagination: {
+    el: ".mv-pagination .swiper-pagination",
+    type: "fraction",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: false,
   },
   thumbs: {
     swiper: swiper,

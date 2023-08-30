@@ -40,11 +40,105 @@
 }
 
 .swiper {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
 }
+.main-pagination {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-top: 0;
+    &::after {
+      display: none;
+    }
+    &::before {
+      width: 40px;
+      height: 40px;
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      font-size: 20px;
+      color: $w;
+      margin-left: 4px;
+    }
+  }
+  .swiper-button-next {
+    &::before {
+      content: "\f30b";
+    }
+  }
+  .swiper-button-prev {
+    &::before {
+      content: "\f30a";
+    }
+  }
+  .swiper-pagination {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    color: $w;
+    height: 44px;
+    margin: -5px 20px 0;
+    .swiper-pagination-current,
+    .swiper-pagination-total {
+      width: 20px;
+      text-align: center;
+    }
+  }
+  // .swiper-button-prev,
+  // .swiper-rtl .swiper-button-next {
+  //   top: auto;
+  //   bottom: 8%;
+  //   left: 0;
+
+  //   &::after {
+  //     display: none;
+  //   }
+  //   &::before {
+  //     content: "\f30a";
+  //     font-family: "Line Awesome Free";
+  //     font-weight: 900;
+  //     font-size: 20px;
+  //     color: $w;
+  //   }
+  // }
+
+  // &::after {
+  //   content: "\f30b";
+  //   font-family: "Line Awesome Free";
+  //   font-weight: 900;
+  // }
+  // &::before {
+  //   content: "\f30a";
+  //   font-family: "Line Awesome Free";
+  //   font-weight: 900;
+  // }
+}
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  width: 80%;
+  left: 0;
+}
 
 .slide-intro {
+  .main-pagination {
+    right: auto;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-645px);
+  }
   .swiper-slide {
     text-align: left;
     font-size: 18px;
@@ -85,92 +179,6 @@
         font-weight: 400;
       }
     }
-  }
-}
-
-.swiper {
-  .main-pagination {
-    display: flex;
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-645px);
-    z-index: 10;
-    .swiper-button-next,
-    .swiper-button-prev {
-      position: relative;
-      top: auto;
-      bottom: auto;
-      left: auto;
-      right: auto;
-      margin-top: 0;
-      &::after {
-        display: none;
-      }
-      &::before {
-        width: 40px;
-        height: 40px;
-        font-family: "Line Awesome Free";
-        font-weight: 900;
-        font-size: 20px;
-        color: $w;
-        margin-left: 4px;
-      }
-    }
-    .swiper-button-next {
-      &::before {
-        content: "\f30b";
-      }
-    }
-    .swiper-button-prev {
-      &::before {
-        content: "\f30a";
-      }
-    }
-    .swiper-pagination {
-      display: flex;
-      align-items: center;
-      position: relative;
-      top: auto;
-      left: auto;
-      bottom: auto;
-      color: $w;
-      height: 44px;
-      margin: -5px 20px 0;
-      .swiper-pagination-current,
-      .swiper-pagination-total {
-        width: 20px;
-        text-align: center;
-      }
-    }
-    // .swiper-button-prev,
-    // .swiper-rtl .swiper-button-next {
-    //   top: auto;
-    //   bottom: 8%;
-    //   left: 0;
-
-    //   &::after {
-    //     display: none;
-    //   }
-    //   &::before {
-    //     content: "\f30a";
-    //     font-family: "Line Awesome Free";
-    //     font-weight: 900;
-    //     font-size: 20px;
-    //     color: $w;
-    //   }
-    // }
-
-    // &::after {
-    //   content: "\f30b";
-    //   font-family: "Line Awesome Free";
-    //   font-weight: 900;
-    // }
-    // &::before {
-    //   content: "\f30a";
-    //   font-family: "Line Awesome Free";
-    //   font-weight: 900;
-    // }
   }
 }
 
@@ -420,13 +428,13 @@ main {
     left: auto;
     bottom: -20px;
     .swiper-pagination {
-      color: $b;
+      color: $tit;
     }
     .swiper-button-prev::before {
-      color: $b;
+      color: $tit;
     }
     .swiper-button-next::before {
-      color: $b;
+      color: $tit;
     }
   }
   .swiper-scrollbar {

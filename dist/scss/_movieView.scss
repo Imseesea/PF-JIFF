@@ -80,7 +80,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url(../../images/movieView/mV-1.png);
+    background-image: url(../../images/movieView/mV-main.png);
     .blackcover {
       display: none;
     }
@@ -161,23 +161,48 @@
 .row {
   display: flex;
   margin-top: 50px;
+  margin-bottom: 100px;
   .movie-left {
     width: 75%;
+    padding-right: 8rem;
     // margin-right: 120px;
+    .film_director,
+    .photo {
+      padding-top: 50px;
+    }
     h3 {
-      margin-top: 50px;
       font-size: 24px;
       font-weight: 700;
       color: $tit;
-      &:first-child {
-        margin-top: 0;
-      }
     }
     .desc {
       padding-top: 30px;
       color: $txt;
       font-size: 18px;
       font-weight: 500;
+    }
+    .film-grallery {
+      position: relative;
+      padding-bottom: 30px;
+    }
+    .mv-pagination {
+      // transform: translateY(20px);
+      transform: translate(5px, 20px);
+      .swiper-pagination {
+        color: $tit;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        &::before {
+          color: $tit;
+        }
+      }
+    }
+    .swiper-scrollbar {
+      background-color: $bg;
+      .swiper-scrollbar-drag {
+        background-color: rgba($p, 0.5);
+      }
     }
     .list-dir {
       margin-top: 30px;
@@ -227,4 +252,8 @@
       color: $tit;
     }
   }
+}
+
+.swiper-thumbs {
+  margin-top: 15px;
 }
