@@ -6,97 +6,47 @@
 // 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
 
 // 공통
-.wrap {
-  padding-top: 70px;
-}
-.fixed-blank {
-  height: 0;
-}
-#hd {
-  position: absolute;
+// .wrap {
+//   padding-top: 70px;
+// }
+#wrap {
   margin: 0 auto;
   width: 100%;
-  width: 100%;
-  border-bottom: 0px solid rgba(255, 255, 255, 0);
-  background: $w;
-  z-index: 1000;
-  .logo {
-    display: inline-block;
-    // width: 250px;
-    a {
-      display: inline-block;
-      height: 100%;
-      img {
-        margin-top: -10px;
-        max-width: 100%;
-        vertical-align: middle;
-      }
-    }
-  }
-  .gnb {
-    position: relative;
-    display: block;
-    nav {
-      position: relative;
-      .depth1 {
-        display: flex;
-        flex-wrap: wrap;
-        width: auto;
-        margin-right: 16px;
-        li {
-          padding: 0 20px;
-          position: relative;
-          text-align: center;
-          z-index: 1;
-          a {
-            display: inline-block;
-            font-size: 20px;
-            white-space: nowrap;
-            font-weight: 600;
-            position: relative;
-          }
-        }
-        li.active2 {
-          border-bottom: 4px solid $p;
-        }
-      }
-      .depth2 {
-        margin: 0;
-        border: solid 1px #010101;
-        background: #272727;
-        padding: 25px 50px;
-        min-width: 250px;
-        li {
-          margin: 0;
-          padding: 0;
-          a {
-            font-size: 17px;
-            display: table-cell;
-            vertical-align: middle;
-            padding: 7px 0px;
-            color: #fff;
-            font-weight: 500;
-            white-space: nowrap;
-            position: relative;
-          }
-        }
-      }
-    }
-  }
+  overflow: hidden;
 }
-.container-xxl {
-  width: 100%;
-  padding-right: 2rem;
-  padding-left: 2rem;
+// .fixed-blank {
+//   height: 0;
+// }
+
+.inner {
+  max-width: 1280px;
   margin-right: auto;
   margin-left: auto;
 }
+
+// header
+#hd {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  width: 100%;
+  background: $w;
+  z-index: 1000;
+}
+.container-xxl {
+  width: 100%;
+  // padding-right: 2rem;
+  // padding-left: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .header_top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   border-bottom: solid 1px #aaaaaa20;
-  padding: 1.5rem 0;
+  padding: 10px 0;
   .other_home {
     float: left;
     ul {
@@ -131,9 +81,12 @@
         font-size: 15px;
         color: $txt;
       }
-      .on a {
-        color: $p;
-        font-weight: 700;
+      .on {
+        padding-left: 0;
+        a {
+          color: $p;
+          font-weight: 700;
+        }
       }
     }
   }
@@ -146,11 +99,14 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      margin-left: 15px;
-      margin-right: 15px;
+      // margin-left: 15px;
+      // margin-right: 15px;
       li {
         position: relative;
         padding: 0 15px;
+        &:last-child {
+          padding-right: 0;
+        }
         a {
           display: block;
           color: $txt;
@@ -178,34 +134,108 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 25px 0;
-  .main_nav_left {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+  // padding-top: 10px;
+  // padding-bottom: 25px 0;
+
+  .screen_out {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
   }
-  .main_nav_right {
-    .screen_out {
-      overflow: hidden;
-      position: absolute;
-      width: 0;
-      height: 0;
-      line-height: 0;
-      text-indent: -9999px;
-    }
-    .nav_depth2_wrap {
-      position: absolute;
-      top: 54px;
-      padding: 0;
-      margin: 0 auto;
-      left: 50%;
-      right: auto;
-      transform: translate(-50%, 0);
-      z-index: 100;
+}
+
+.logo {
+  a {
+    display: block;
+    background: url(../../images/comm/logo-.png) 0 0 / contain no-repeat;
+    margin: 0 auto;
+    text-indent: -9999px;
+    width: 150px;
+    height: 60px;
+  }
+}
+
+.gnb {
+  position: relative;
+  display: block;
+  nav {
+    position: relative;
+    .depth1 {
+      display: flex;
+      flex-wrap: wrap;
+      width: auto;
+      // margin-right: 16px;
+      li {
+        padding: 0 20px;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        &:hover,
+        &.active2 {
+          border-bottom: 4px solid $p;
+
+          .depth2 {
+            display: block;
+          }
+        }
+        &:last-child {
+          padding-right: 0;
+          // &.active2 {
+          //   display: none;
+          // }
+        }
+        a {
+          display: inline-block;
+          font-size: 20px;
+          white-space: nowrap;
+          font-weight: 600;
+          position: relative;
+          padding: 25px 0;
+        }
+      }
+      .depth2 {
+        display: none;
+        position: absolute;
+        top: 84px;
+        padding: 0;
+        // margin: 0 auto;
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, 0);
+        z-index: 100;
+        margin: 0;
+        border: solid 1px #010101;
+        background: #272727;
+        padding: 25px 50px;
+        min-width: 250px;
+        li {
+          margin: 0;
+          padding: 0;
+          a {
+            font-size: 17px;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 7px 0px;
+            color: #fff;
+            font-weight: 500;
+            white-space: nowrap;
+            position: relative;
+          }
+        }
+      }
+      // .active2 {
+      //   border-bottom: 4px solid $p;
+      //   .nav_depth2_wrap {
+      //     display: block;
+      //   }
+      // }
     }
   }
 }
+
 .container {
   padding: 0 $bothMargin;
 }
