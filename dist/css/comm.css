@@ -697,7 +697,7 @@ legend {
   font-size: 15px;
   font-weight: 400;
 }
-.row .movie-right h3 {
+.row .movie-right h4 {
   color: #2b2b2b;
   font-size: 24px;
   font-weight: 700;
@@ -1070,6 +1070,16 @@ legend {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.slide-intro .swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 }
 .slide-intro .swiper-slide a {
   display: block;
@@ -1206,7 +1216,7 @@ main .inner {
   transition: 0.5s;
   transform: scale(1.06);
 }
-.screen-wrap .screen-tab-contents .screen_content li a span {
+.screen-wrap .screen-tab-contents .screen_content li a strong {
   font-size: 24px;
   font-weight: 700;
   color: #2b2b2b;
@@ -1402,7 +1412,7 @@ main .inner {
 .sub-news-section li a .sub-txt-box {
   padding-top: 30px;
 }
-.sub-news-section li a span {
+.sub-news-section li a strong {
   color: #2b2b2b;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -1436,7 +1446,7 @@ main .inner {
   width: 30%;
   height: auto;
 }
-.photo-section li span {
+.photo-section li strong {
   font-size: 18px;
   font-weight: 500;
   color: #2b2b2b;
@@ -1498,7 +1508,7 @@ main .inner {
   display: flex;
   justify-content: space-between;
 }
-.list-txt a span {
+.list-txt a strong {
   color: #2b2b2b;
   display: -webkit-box;
   -webkit-line-clamp: 1;
