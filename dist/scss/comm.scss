@@ -80,6 +80,9 @@
         line-height: 38px;
         font-size: 15px;
         color: $txt;
+        &:hover {
+          color: #bbbbbb;
+        }
       }
       .on {
         padding-left: 0;
@@ -112,6 +115,9 @@
           color: $txt;
           font-size: 15px;
           line-height: 38px;
+          &:hover {
+            color: #bbbbbb;
+          }
         }
         .search-icon {
           display: flex;
@@ -168,26 +174,34 @@
       flex-wrap: wrap;
       width: auto;
       // margin-right: 16px;
-      li {
-        padding: 0 20px;
+      > li {
+        margin-left: 40px;
         position: relative;
         text-align: center;
         z-index: 1;
         &:hover,
         &.active2 {
-          border-bottom: 4px solid $p;
-
+          // border-bottom: 4px solid $p;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: $p;
+          }
           .depth2 {
             display: block;
           }
         }
         &:last-child {
-          padding-right: 0;
+          // padding-right: 0;
           // &.active2 {
           //   display: none;
           // }
         }
-        a {
+        > a {
           display: inline-block;
           font-size: 20px;
           white-space: nowrap;
@@ -199,7 +213,7 @@
       .depth2 {
         display: none;
         position: absolute;
-        top: 84px;
+        top: 80px;
         padding: 0;
         // margin: 0 auto;
         left: 50%;
@@ -209,20 +223,25 @@
         margin: 0;
         border: solid 1px #010101;
         background: #272727;
-        padding: 25px 50px;
-        min-width: 250px;
+        padding: 25px 30px;
+        min-width: 210px;
         li {
           margin: 0;
           padding: 0;
+          // border-bottom: 2px solid #272727;
           a {
             font-size: 17px;
-            display: table-cell;
-            vertical-align: middle;
+            display: block;
+            // vertical-align: middle;
             padding: 7px 0px;
             color: #fff;
             font-weight: 500;
             white-space: nowrap;
             position: relative;
+            text-align: left;
+            &:hover {
+              color: red;
+            }
           }
         }
       }
@@ -357,6 +376,43 @@
 .swiper-scrollbar.swiper-scrollbar-horizontal {
   width: 80%;
   left: 0;
+}
+// 일시정지
+.wrap-autoplay-control {
+  position: absolute;
+  z-index: 10;
+  bottom: 7px;
+  left: calc(50% + 60px);
+  transform: translateX(-50%);
+  button {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+    }
+    &[aria-pressed="false"]:before {
+      top: 4px;
+      left: 4px;
+      width: 12px;
+      height: 12px;
+      border-left: 3px solid #000;
+      border-right: 3px solid #000;
+      box-sizing: border-box;
+    }
+    &[aria-pressed="true"]:before {
+      top: 2px;
+      left: 2px;
+      border-top: 8px solid transparent;
+      border-left: 16px solid #000;
+      border-bottom: 8px solid transparent;
+    }
+  }
 }
 
 .slide-intro {

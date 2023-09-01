@@ -782,6 +782,9 @@ legend {
   font-size: 15px;
   color: #7b7b7b;
 }
+.header_top .other_home ul a:hover {
+  color: #bbbbbb;
+}
 .header_top .other_home ul .on {
   padding-left: 0;
 }
@@ -812,6 +815,9 @@ legend {
   color: #7b7b7b;
   font-size: 15px;
   line-height: 38px;
+}
+.header_top .util .util_list li a:hover {
+  color: #bbbbbb;
 }
 .header_top .util .util_list li .search-icon {
   display: flex;
@@ -860,22 +866,25 @@ legend {
   flex-wrap: wrap;
   width: auto;
 }
-.gnb nav .depth1 li {
-  padding: 0 20px;
+.gnb nav .depth1 > li {
+  margin-left: 40px;
   position: relative;
   text-align: center;
   z-index: 1;
 }
-.gnb nav .depth1 li:hover, .gnb nav .depth1 li.active2 {
-  border-bottom: 4px solid #fe2e00;
+.gnb nav .depth1 > li:hover::before, .gnb nav .depth1 > li.active2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #fe2e00;
 }
-.gnb nav .depth1 li:hover .depth2, .gnb nav .depth1 li.active2 .depth2 {
+.gnb nav .depth1 > li:hover .depth2, .gnb nav .depth1 > li.active2 .depth2 {
   display: block;
 }
-.gnb nav .depth1 li:last-child {
-  padding-right: 0;
-}
-.gnb nav .depth1 li a {
+.gnb nav .depth1 > li > a {
   display: inline-block;
   font-size: 20px;
   white-space: nowrap;
@@ -886,7 +895,7 @@ legend {
 .gnb nav .depth1 .depth2 {
   display: none;
   position: absolute;
-  top: 84px;
+  top: 80px;
   padding: 0;
   left: 50%;
   right: auto;
@@ -895,8 +904,8 @@ legend {
   margin: 0;
   border: solid 1px #010101;
   background: #272727;
-  padding: 25px 50px;
-  min-width: 250px;
+  padding: 25px 30px;
+  min-width: 210px;
 }
 .gnb nav .depth1 .depth2 li {
   margin: 0;
@@ -904,13 +913,16 @@ legend {
 }
 .gnb nav .depth1 .depth2 li a {
   font-size: 17px;
-  display: table-cell;
-  vertical-align: middle;
+  display: block;
   padding: 7px 0px;
   color: #fff;
   font-weight: 500;
   white-space: nowrap;
   position: relative;
+  text-align: left;
+}
+.gnb nav .depth1 .depth2 li a:hover {
+  color: red;
 }
 
 .container {
@@ -1006,6 +1018,43 @@ legend {
 .swiper-scrollbar.swiper-scrollbar-horizontal {
   width: 80%;
   left: 0;
+}
+
+.wrap-autoplay-control {
+  position: absolute;
+  z-index: 10;
+  bottom: 7px;
+  left: calc(50% + 60px);
+  transform: translateX(-50%);
+}
+.wrap-autoplay-control button {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.wrap-autoplay-control button:before {
+  display: block;
+  content: "";
+  position: absolute;
+}
+.wrap-autoplay-control button[aria-pressed=false]:before {
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+  box-sizing: border-box;
+}
+.wrap-autoplay-control button[aria-pressed=true]:before {
+  top: 2px;
+  left: 2px;
+  border-top: 8px solid transparent;
+  border-left: 16px solid #000;
+  border-bottom: 8px solid transparent;
 }
 
 .slide-intro .main-pagination {

@@ -5,13 +5,29 @@ var swiper = new Swiper(".swiper-intro", {
     el: ".swiper-pagination",
     type: "fraction",
   },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  on: {
+    init: function () {
+      thisSlide = this;
+      autoPlayBtn = document.querySelector(".wrap-autoplay-control > button");
+      autoPlayBtn.addEventListener("click", (e) => {
+        autoPlayState = autoPlayBtn.getAttribute("aria-pressed");
+        if (autoPlayState === "false") {
+          autoPlayBtn.setAttribute("aria-pressed", "true");
+          thisSlide.autoplay.stop();
+        } else if (autoPlayState === "true") {
+          autoPlayBtn.setAttribute("aria-pressed", "false");
+          thisSlide.autoplay.start();
+        }
+      });
+    },
   },
 });
 
@@ -87,4 +103,14 @@ var swiper2 = new Swiper(".mV-thumb2", {
   thumbs: {
     swiper: swiper,
   },
+});
+
+$(function () {
+  let gnbEl = $(".gnb .depth1 > li");
+  let gnbLink = $(".gnb .depth1 > li > a");
+
+  gnbLink.on("mouseenter, focus", function () {
+    gnbEl.removeClass("active2");
+    $(this).parent().addClass("active2");
+  });
 });
