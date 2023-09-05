@@ -451,13 +451,14 @@
     img {
       display: block;
       width: 100%;
-      height: 780px;
+      height: 1070px;
       object-fit: cover;
     }
     .slide-txt {
       position: absolute;
       top: 180px;
-      right: 270px;
+      left: 50%;
+      transform: translateX(200px);
       color: $w;
       strong {
         font-size: 24px;
@@ -1214,6 +1215,99 @@ main {
       border-radius: inherit;
       border: 1px solid rgba($b, 0.06);
       background: rgba($b, 0.03);
+    }
+  }
+}
+.address-lst {
+  height: 210px;
+  background: $tit;
+  .address-box {
+    display: flex;
+    flex-direction: column;
+    padding: 59px 0;
+  }
+  address {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    // font-weight: 500;
+    &:last-child {
+      padding-bottom: 0;
+    }
+    .addre {
+      letter-spacing: 40px;
+    }
+    strong {
+      font-size: 16px;
+      font-weight: 500;
+      // display: block;
+      width: 270px;
+      color: $ad-tit;
+      letter-spacing: 22px;
+      // margin-right: 20px;
+      // text-align-last: left;
+      position: relative;
+      &::before {
+        position: absolute;
+        width: 88%;
+        height: 1px;
+        display: block;
+        content: "";
+        top: 10px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+    span {
+      color: $sub;
+      width: 420px;
+    }
+
+    p {
+      // margin-left: 30px;
+      color: $sub;
+      width: 264px;
+    }
+  }
+}
+.copyright-wrap {
+  background: #191919;
+}
+.copyright {
+  padding: 50px 0;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  .cr1-member {
+    color: $ft-tit;
+    font-size: 14px;
+    padding-bottom: 40px;
+    a {
+      padding-right: 20px;
+    }
+  }
+  p {
+    color: $ft-txt;
+  }
+  .cr2 {
+    font-size: 11px;
+  }
+  .cr3 {
+    padding-top: 5px;
+    font-size: 12px;
+  }
+  .cr-sns-box {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        padding: 0 10px;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
     }
   }
 }
