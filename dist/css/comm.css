@@ -1,8 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -61,14 +60,12 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after {
+blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-q:before,
-q:after {
+q:before, q:after {
   content: "";
   content: none;
 }
@@ -98,14 +95,11 @@ body {
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
-input[type="text"],
-input[type="password"],
-input[type="submit"],
-input[type="search"] {
+input[type=text], input[type=password], input[type=submit], input[type=search] {
   -webkit-appearance: none;
   border-radius: 0;
 }
-input:checked[type="checkbox"] {
+input:checked[type=checkbox] {
   background-color: #666;
   -webkit-appearance: checkbox;
 }
@@ -115,14 +109,11 @@ button {
   border-radius: 0;
 }
 
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-input[type="file"] {
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
   -webkit-appearance: button;
   border-radius: 0;
 }
-input[type="search"]::-webkit-search-cancel-button {
+input[type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
@@ -132,8 +123,7 @@ body {
   background: #fff;
   font-size: 14px;
   line-height: 1.5;
-  font-family: "pretendard", "Noto Sans KR", "Malgun Gothic", "맑은 고딕",
-    sans-serif;
+  font-family: "pretendard", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #2b2b2b;
 }
 
@@ -148,8 +138,7 @@ a {
   color: #7b7b7b;
   text-decoration: none;
 }
-a:active,
-a:hover {
+a:active, a:hover {
   text-decoration: none;
 }
 
@@ -168,7 +157,7 @@ hr {
   display: none;
 }
 
-input[type="password"] {
+input[type=password] {
   font-family: "Malgun Gothic";
 }
 
@@ -841,6 +830,22 @@ legend {
   font-weight: 900;
 }
 
+.container-xxl {
+  width: 100%;
+  height: 70px;
+  background: #f6f6f6;
+}
+.container-xxl .snb_ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 15px 0;
+}
+.container-xxl .snb_ul .current {
+  line-height: 40px;
+}
+
 .main_nav {
   position: relative;
   display: flex;
@@ -858,7 +863,7 @@ legend {
 
 .logo a {
   display: block;
-  background: url(../../images/comm/logo-.png) 0 0 / contain no-repeat;
+  background: url(../../images/comm/logo-.png) 0 0/contain no-repeat;
   margin: 0 auto;
   text-indent: -9999px;
   width: 150px;
@@ -883,8 +888,7 @@ legend {
   text-align: center;
   z-index: 1;
 }
-.gnb nav .depth1 > li:hover::before,
-.gnb nav .depth1 > li.active2::before {
+.gnb nav .depth1 > li:hover::before, .gnb nav .depth1 > li.active2::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -893,8 +897,7 @@ legend {
   height: 4px;
   background: #fe2e00;
 }
-.gnb nav .depth1 > li:hover .depth2,
-.gnb nav .depth1 > li.active2 .depth2 {
+.gnb nav .depth1 > li:hover .depth2, .gnb nav .depth1 > li.active2 .depth2 {
   display: block;
 }
 .gnb nav .depth1 > li > a {
@@ -965,7 +968,7 @@ legend {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .swiper {
@@ -1053,7 +1056,7 @@ legend {
   content: "";
   position: absolute;
 }
-.wrap-autoplay-control button[aria-pressed="false"]:before {
+.wrap-autoplay-control button[aria-pressed=false]:before {
   top: 4px;
   left: 4px;
   width: 12px;
@@ -1062,7 +1065,7 @@ legend {
   border-right: 3px solid #fff;
   box-sizing: border-box;
 }
-.wrap-autoplay-control button[aria-pressed="true"]:before {
+.wrap-autoplay-control button[aria-pressed=true]:before {
   top: 2px;
   left: 3px;
   border-top: 8px solid transparent;
@@ -1092,11 +1095,7 @@ legend {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.5)
-  );
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 }
 .slide-intro .swiper-slide a {
   display: block;
@@ -1107,7 +1106,7 @@ legend {
   width: 100%;
   height: 1070px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .slide-intro .swiper-slide .slide-txt {
   position: absolute;
@@ -1228,7 +1227,7 @@ main .inner {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   height: 100%;
   box-sizing: border-box;
   transition: 0.5s;
@@ -1301,7 +1300,7 @@ main .inner {
   height: 100%;
   border-radius: 8px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   box-sizing: border-box;
   transition: transform 0.5s;
   transform: scale(1.02);
@@ -1420,7 +1419,7 @@ main .inner {
 .sub-news-section li a img {
   border-radius: 8px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -1487,7 +1486,6 @@ main .inner {
   font-weight: 900;
   color: #2b2b2b;
   margin-bottom: 30px;
-  height: 45px;
 }
 .notice-wrap .col {
   position: relative;
@@ -1495,7 +1493,6 @@ main .inner {
 }
 .notice-wrap .box {
   width: 100%;
-  height: 245px;
   box-sizing: border-box;
   border-radius: 8px;
   background-color: #f6f6f6;
@@ -1543,9 +1540,9 @@ main .inner {
   font-size: 14px;
 }
 
-/* .cs-wrap {
-  height: 245px;
-} */
+.cs-wrap {
+  height: 210px;
+}
 .cs-wrap .cs-number p {
   color: #2b2b2b;
 }
@@ -1693,7 +1690,7 @@ main .inner {
 .sns-app-wrap ul li a img {
   height: 80%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .j-screen_wrap {
@@ -1721,7 +1718,7 @@ main .inner {
 .j-screen_wrap .j-screen .ani-logo img {
   width: 300px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .j-screen_wrap .j-screen .ani-motion {
   position: relative;
@@ -1768,7 +1765,7 @@ main .inner {
   height: 100%;
   border-radius: 10px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   box-sizing: border-box;
   transition: 0.5s;
   transform: scale(1.06);
@@ -1879,4 +1876,4 @@ main .inner {
 }
 .copyright .cr-sns-box ul li:last-child {
   padding-right: 0;
-} /*# sourceMappingURL=comm.css.map */
+}/*# sourceMappingURL=comm.css.map */

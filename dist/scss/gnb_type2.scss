@@ -1,0 +1,16 @@
+// gnb depth2 type2
+.gnb nav .depth1 .depth2 {
+  display: flex;
+  background: #eee;
+  display: flex;
+  position: absolute;
+  top: 80px;
+  /* padding: 0; */
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, 0);
+  z-index: 100;
+  margin: 0;
+  padding: 10px 20px;
+  min-width: 210px;
+}

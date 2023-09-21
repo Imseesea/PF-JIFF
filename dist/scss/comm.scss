@@ -134,7 +134,22 @@
     }
   }
 }
-
+.container-xxl {
+  width: 100%;
+  height: 70px;
+  background: $bg;
+  .snb_ul {
+    // max-width: 1280px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;
+    .current {
+      line-height: 40px;
+    }
+  }
+}
 .main_nav {
   position: relative;
   display: flex;
@@ -193,6 +208,7 @@
           }
           .depth2 {
             display: block;
+            // display: none;
           }
         }
         &:last-child {
