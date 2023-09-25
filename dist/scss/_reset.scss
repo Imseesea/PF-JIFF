@@ -91,7 +91,7 @@ table {
 }
 
 body {
-  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
@@ -101,18 +101,18 @@ input {
   &[type="password"],
   &[type="submit"],
   &[type="search"] {
-    -webkit-appearance: none;
+    appearance: none;
     border-radius: 0;
   }
 
   &:checked[type="checkbox"] {
     background-color: #666;
-    -webkit-appearance: checkbox;
+    appearance: checkbox;
   }
 }
 
 button {
-  -webkit-appearance: button;
+  appearance: button;
   border-radius: 0;
 }
 
@@ -121,7 +121,7 @@ input {
   &[type="submit"],
   &[type="reset"],
   &[type="file"] {
-    -webkit-appearance: button;
+    appearance: button;
     border-radius: 0;
   }
 
@@ -131,21 +131,19 @@ input {
 }
 
 /* 기본 폰트 설정 */
-/* mobile */
-
+/* desktop */
 body {
   background: #fff;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   font-family: "pretendard", "Noto Sans KR", "Malgun Gothic", "맑은 고딕",
     sans-serif;
   color: $tit;
 }
-
-/* desktop */
-@media screen and (min-width: 1280px) {
+// mobile
+@media screen and (max-width: 744px) {
   body {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
