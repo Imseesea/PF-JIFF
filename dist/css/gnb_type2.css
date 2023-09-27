@@ -12,12 +12,12 @@
 }
 .container-xxl .snb_ul li {
   line-height: 50px;
-  padding-left: 15px;
+  padding-left: 0.938rem;
 }
 .container-xxl .snb_ul li a {
   display: block;
   margin: auto;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   color: #585858;
 }

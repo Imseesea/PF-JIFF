@@ -132,6 +132,7 @@ input {
 
 /* 기본 폰트 설정 */
 /* desktop */
+html,
 body {
   background: #fff;
   font-size: 16px;
@@ -142,6 +143,7 @@ body {
 }
 // mobile
 @media screen and (max-width: 744px) {
+  html,
   body {
     font-size: 14px;
   }
@@ -289,5 +291,20 @@ legend {
     font-size: 0;
     clear: both;
     content: "";
+  }
+}
+
+.pc {
+  display: block;
+}
+.m {
+  display: none;
+}
+@media screen and (max-width: 744px) {
+  .pc {
+    display: none;
+  }
+  .m {
+    display: block;
   }
 }

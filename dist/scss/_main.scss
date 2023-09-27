@@ -3,7 +3,7 @@
   display: block;
   // margin-top: 50px;
   .main-sec-tit {
-    font-size: 46px;
+    font-size: 2.875rem;
     font-weight: 900;
   }
   .screen-tab-menu {
@@ -12,7 +12,7 @@
     .tab-menu-contents {
       display: flex;
       flex-wrap: wrap;
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 500;
       position: relative;
       a:hover {
@@ -25,14 +25,14 @@
           a {
             color: $tit;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 1.125rem;
           }
           &::before {
             position: absolute;
             top: 13px;
             left: 110px;
             width: 69px;
-            height: 14px;
+            height: 0.875rem;
             content: "";
             z-index: -1;
             background-color: $p-btn;
@@ -47,7 +47,7 @@
     .sub-sec-tit {
       margin-bottom: 30px;
 
-      font-size: 30px;
+      font-size: 1.875em;
       font-weight: 900;
     }
     .screen_content {
@@ -94,12 +94,12 @@
           }
           strong {
             padding-top: 10px;
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 700;
             color: $tit;
           }
           p {
-            font-size: 18px;
+            font-size: 1.125rem;
             font-weight: 500;
             padding-top: 10px;
           }
@@ -115,7 +115,7 @@
 }
 @media screen and (max-width: 744px) {
   .screen-wrap .screen-tab-contents .screen_content li {
-    width: 31%;
+    width: calc(33.333% - 12px);
     strong {
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -149,7 +149,7 @@
   // display: flex;
   .jiff-news-tit {
     text-align: center;
-    font-size: 46px;
+    font-size: 2.875rem;
     font-weight: 900;
     color: $tit;
   }
@@ -222,7 +222,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     // height: 72px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: $tit;
   }
@@ -237,9 +237,26 @@
     // height: 105px;
     // margin-bottom: 42px;
     padding-top: 30px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     color: $tit;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main-news {
+    height: 496px;
+    .main-news-content .img-box {
+      height: 160px;
+    }
+    .txt-box {
+      padding-top: 35px;
+      .main-news-txt {
+        padding-top: 35px;
+      }
+      .short_cut_btn {
+        padding-top: 35px;
+      }
+    }
   }
 }
 @media screen and (max-width: 744px) {
@@ -253,18 +270,24 @@
   }
   .main-news {
     width: 100%;
-    height: 562px;
+    height: 612px;
     .main-news-content {
-      padding: 40px 0;
-      width: 90%;
+      padding: 50px 0;
+      width: 80%;
       .img-box {
         height: 300px;
       }
       .txt-box {
-        padding-top: 40px;
-      }
-      .main-news-tit {
-        -webkit-line-clamp: 1;
+        padding-top: 50px;
+        .main-news-tit {
+          -webkit-line-clamp: 1;
+        }
+        .main-news-txt {
+          padding-top: 40px;
+        }
+        .short_cut_btn {
+          padding-top: 40px;
+        }
       }
     }
   }
@@ -301,6 +324,7 @@
   // background-color: $bg;
   width: 70%;
   height: 500px;
+  margin: 0;
   .swiper-horizontal > .swiper-scrollbar,
   .swiper-scrollbar.swiper-scrollbar-horizontal {
     width: calc(100% - 170px);
@@ -339,7 +363,7 @@
     border-radius: 10px;
     background-color: $bg;
     a {
-      margin: auto;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       width: 80%;
@@ -370,7 +394,7 @@
         border-radius: 8px;
         object-fit: cover;
         width: 100%;
-        height: 140px;
+        height: 100%;
         box-sizing: border-box;
         transition: 0.5s;
         transform: scale(1.02);
@@ -386,7 +410,7 @@
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
         overflow: hidden;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 500;
 
         // display: block;
@@ -401,29 +425,19 @@
   margin-top: 100px;
   .jiff-news-tit {
     color: $tit;
-    font-size: 34px;
+    font-size: 2.125rem;
     font-weight: 900;
     margin-bottom: 30px;
   }
 }
-@media screen and (max-width: 1024px) {
-  .sub-news swiper {
-    margin-right: 0;
-  }
-}
+
 @media screen and (max-width: 744px) {
   .sub-news {
     width: 100%;
-    .swiper {
-      margin-right: 0;
-    }
-  }
-  .sub-news-section li a .sub-img-box {
-    height: 130px;
+    height: 430px;
   }
 }
-@media screen and (max-width: 428px) {
-}
+
 .photo-section {
   // display: block;
   margin-top: 30px;
@@ -474,14 +488,14 @@
     //   transform: scale(1.06);
     // }
     strong {
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 500;
       color: $tit;
       padding-top: 10px;
     }
     p {
       padding-top: 10px;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 500;
       color: #7b7b7b;
     }
@@ -494,7 +508,7 @@
 }
 @media screen and (max-width: 744px) {
   .photo-section li {
-    width: 31%;
+    width: calc(33.333% - 12px);
     strong {
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -503,6 +517,16 @@
   }
 }
 @media screen and (max-width: 428px) {
+  .photo-section {
+    flex-direction: column;
+    li {
+      width: 100%;
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .notice-wrap {
@@ -511,7 +535,7 @@
   justify-content: space-between;
   .notice-wrap-tit {
     // margin-bottom: 20px;
-    font-size: 34px;
+    font-size: 2.125rem;
     font-weight: 900;
     color: $tit;
     margin-bottom: 30px;
@@ -530,8 +554,8 @@
     .etc-btn {
       position: absolute;
       top: -67px;
-      right: 15px;
-      font-size: 14px;
+      right: 0.938rem;
+      font-size: 0.875rem;
       font-weight: 400;
       &::after {
         content: "\f30b";
@@ -546,7 +570,19 @@
     }
   }
 }
-
+@media screen and (max-width: 744px) {
+  .notice-wrap {
+    flex-direction: column;
+    .col {
+      width: 100%;
+    }
+    .cs-col {
+      margin-top: 100px;
+    }
+  }
+}
+@media screen and (max-width: 428px) {
+}
 .list-txt {
   li {
     padding-top: 10px;
@@ -568,7 +604,7 @@
     }
     p {
       font-weight: 300;
-      font-size: 14px;
+      font-size: 0.875rem;
     }
   }
 }
@@ -581,6 +617,9 @@
   }
 }
 @media screen and (max-width: 744px) {
+  .list-txt a {
+    font-size: 1rem;
+  }
 }
 
 .cs-wrap {
@@ -590,23 +629,23 @@
       color: $tit;
     }
     strong {
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 500;
       margin-right: 20px;
     }
     span {
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 700;
     }
   }
   .cs-time {
     color: $tit;
-    // font-size: 16px;
+    // font-size: 1rem;
     margin-top: 20px;
 
     strong {
       font-weight: 500;
-      font-size: 18px;
+      font-size: 1.125rem;
       position: relative;
       padding-left: 24px;
       &::before {
@@ -616,12 +655,12 @@
         content: "\f017";
         font-family: "Line Awesome Free";
         font-weight: 900;
-        font-size: 24px;
+        font-size: 1.5rem;
       }
     }
     span {
       font-weight: 700;
-      font-size: 24px;
+      font-size: 1.5rem;
       margin-left: 10px;
     }
   }
@@ -652,7 +691,7 @@
   margin-top: 100px;
   h4 {
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: $tit;
     text-align: center;
@@ -662,7 +701,7 @@
   .swiper-slide {
     height: 100px;
     text-indent: -9999px;
-    background-position: 0 0;
+    background-position: 50% 0;
     background-repeat: no-repeat;
   }
   .s1 {
@@ -702,12 +741,12 @@
 
 .sns-app-wrap {
   margin-top: 100px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: space-between;
   width: 100%;
   // width: 80%;
   height: 100px;
-  margin-bottom: 100px;
   .s-a_sec {
     width: 48%;
     height: 100px;
@@ -716,7 +755,7 @@
   }
   h4 {
     margin-right: 60px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
   }
   ul {
@@ -748,6 +787,22 @@
 @media screen and (max-width: 1024px) {
 }
 @media screen and (max-width: 744px) {
+  .sns-app-wrap {
+    margin: 100px 0;
+    flex-direction: column;
+    height: auto;
+    .s-a_sec {
+      width: 100%;
+      flex-direction: column;
+      h4 {
+        margin: 0 auto;
+        padding-bottom: 30px;
+      }
+    }
+    .app-sec {
+      margin-top: 100px;
+    }
+  }
 }
 @media screen and (max-width: 428px) {
 }
@@ -882,7 +937,7 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 10px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     // font-weight: 500;
     &:last-child {
@@ -892,7 +947,7 @@
       letter-spacing: 40px;
     }
     strong {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 500;
       // display: block;
       width: 270px;
@@ -933,7 +988,7 @@
   justify-content: space-between;
   .cr1-member {
     color: $ft-tit;
-    font-size: 14px;
+    font-size: 0.875rem;
     padding-bottom: 40px;
     a {
       padding-right: 20px;
@@ -943,11 +998,11 @@
     color: $ft-txt;
   }
   .cr2 {
-    font-size: 11px;
+    font-size: 0.688rem;
   }
   .cr3 {
     padding-top: 5px;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .cr-sns-box {
     ul {

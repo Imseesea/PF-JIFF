@@ -32,8 +32,8 @@ var swiper = new Swiper(".swiper-intro", {
 });
 
 var swiper = new Swiper(".swiper-news", {
-  slidesPerView: 3,
-  spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 18,
   loop: true,
   // autoplay: {
   //   delay: 2500,
@@ -51,21 +51,45 @@ var swiper = new Swiper(".swiper-news", {
     el: ".swiper-scrollbar",
     hide: false,
   },
+  breakpoints: {
+    428: {
+      slidesPerView: 2,
+      spaceBetween: 18,
+    },
+    744: {
+      slidesPerView: 3,
+      spaceBetween: 18,
+    },
+  },
 });
 
 var swiper = new Swiper(".swiper-sponsor", {
-  slidesPerView: 7,
-  spaceBetween: 20,
-  slidesPerGroup: 3,
+  slidesPerView: 2,
+  spaceBetween: 18,
+  slidesPerGroup: 2,
   loop: true,
   loopAdditionalSlides: 1,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  breakpoints: {
+    428: {
+      slidesPerView: 3,
+      spaceBetween: 18,
+    },
+    744: {
+      slidesPerView: 5,
+      spaceBetween: 18,
+    },
+    1024: {
+      slidesPerView: 7,
+      spaceBetween: 18,
+    },
   },
 });
 

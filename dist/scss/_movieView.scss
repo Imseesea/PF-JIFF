@@ -31,7 +31,7 @@
       .kor {
         text-align: center;
 
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 700;
         color: $tit;
         &::after {
@@ -101,7 +101,7 @@
     h3 {
       opacity: 0.99;
       text-shadow: 2px 2px 2px #33333350;
-      margin-bottom: 15px;
+      margin-bottom: 0.938rem;
       display: block;
       opacity: 0.99;
       font-size: 72px;
@@ -109,13 +109,13 @@
       span {
         display: inline-block;
         opacity: 0.7;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 700;
       }
     }
     .f-sub-tit {
       color: $w;
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 700;
       opacity: 1;
       text-shadow: 2px 2px 2px #11111150;
@@ -124,7 +124,7 @@
 }
 .film_sec {
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   color: $tit;
   ul {
@@ -140,9 +140,9 @@
       span {
         display: inline-block;
         color: $txt;
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
-        padding-right: 14px;
+        padding-right: 0.875rem;
       }
       &::after {
         content: "";
@@ -171,14 +171,14 @@
       padding-top: 50px;
     }
     h4 {
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 700;
       color: $tit;
     }
     .desc {
       padding-top: 30px;
       color: $txt;
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 500;
     }
     .film-grallery {
@@ -216,13 +216,13 @@
       .dir_info {
         padding-left: 30px;
         strong {
-          font-size: 20px;
+          font-size: 1.25rem;
           font-weight: 700;
           color: $tit;
         }
         p {
           color: $txt;
-          font-size: 16px;
+          font-size: 1rem;
           font-weight: 700;
         }
       }
@@ -233,12 +233,12 @@
     flex-direction: column;
     width: 25%;
 
-    font-size: 15px;
+    font-size: 0.938rem;
     font-weight: 400;
 
     h4 {
       color: $tit;
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 700;
     }
     strong {
@@ -255,5 +255,5 @@
 }
 
 .swiper-thumbs {
-  margin-top: 15px;
+  margin-top: 0.938rem;
 }
