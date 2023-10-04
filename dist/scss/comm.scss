@@ -61,7 +61,11 @@
   margin-right: auto;
   margin-left: auto;
 }
-
+@media screen and (max-width: 428px) {
+  .container-xxl {
+    display: none;
+  }
+}
 .header_top {
   display: flex;
   justify-content: space-between;
@@ -631,11 +635,23 @@
     }
   }
 }
+
+@media screen and (max-width: 830px) {
+  .lnb {
+    display: none;
+  }
+}
 @media screen and (max-width: 744px) {
   .lnb {
     display: none;
   }
 }
+@media screen and (max-width: 428px) {
+  .lnb {
+    display: none;
+  }
+}
+
 :root {
   --swiper-theme-color: red;
 }

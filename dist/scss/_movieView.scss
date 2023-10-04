@@ -10,6 +10,7 @@
   padding: 50px 0 60px;
   display: flex;
   align-items: center;
+  text-align: center;
   &::before {
     box-sizing: border-box;
     clear: both;
@@ -44,6 +45,7 @@
     }
   }
 }
+
 .container_f {
   position: relative;
   .film-body {
