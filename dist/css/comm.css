@@ -1004,6 +1004,20 @@ legend {
     transform: translateX(20%);
   }
 }
+@media screen and (max-width: 744px) {
+  .slide-intro .swiper-slide .slide-txt {
+    padding: 0 5vw;
+  }
+  .slide-intro .swiper-slide .slide-txt strong {
+    font-size: 19px;
+  }
+  .slide-intro .swiper-slide .slide-txt h2 {
+    font-size: 32px;
+  }
+  .slide-intro .swiper-slide .slide-txt p {
+    font-size: 14px;
+  }
+}
 .address-lst {
   height: 210px;
   background: #2b2b2b;

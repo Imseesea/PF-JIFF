@@ -883,6 +883,20 @@
     transform: translateX(20%);
   }
 }
+@media screen and (max-width: 744px) {
+  .slide-intro .swiper-slide .slide-txt {
+    padding: 0 5vw;
+    strong {
+      font-size: 19px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
 
 // footer
 .address-lst {
