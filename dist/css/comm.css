@@ -1006,7 +1006,7 @@ legend {
 }
 @media screen and (max-width: 744px) {
   .slide-intro .swiper-slide .slide-txt {
-    padding: 0 5vw;
+    word-break: keep-all;
   }
   .slide-intro .swiper-slide .slide-txt strong {
     font-size: 19px;
@@ -1016,6 +1016,12 @@ legend {
   }
   .slide-intro .swiper-slide .slide-txt p {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .slide-intro .swiper-slide .slide-txt {
+    transform: translateX(-10%);
+    word-break: keep-all;
   }
 }
 .address-lst {

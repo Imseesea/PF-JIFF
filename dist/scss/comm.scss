@@ -885,7 +885,8 @@
 }
 @media screen and (max-width: 744px) {
   .slide-intro .swiper-slide .slide-txt {
-    padding: 0 5vw;
+    word-break: keep-all;
+
     strong {
       font-size: 19px;
     }
@@ -897,7 +898,12 @@
     }
   }
 }
-
+@media screen and (max-width: 428px) {
+  .slide-intro .swiper-slide .slide-txt {
+    transform: translateX(-10%);
+    word-break: keep-all;
+  }
+}
 // footer
 .address-lst {
   height: 210px;
