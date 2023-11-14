@@ -1,8 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -61,14 +60,12 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after {
+blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-q:before,
-q:after {
+q:before, q:after {
   content: "";
   content: none;
 }
@@ -95,44 +92,38 @@ table {
 
 body {
   -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
-input[type="text"],
-input[type="password"],
-input[type="submit"],
-input[type="search"] {
+input[type=text], input[type=password], input[type=submit], input[type=search] {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-radius: 0;
 }
-input:checked[type="checkbox"] {
+input:checked[type=checkbox] {
   background-color: #666;
   -webkit-appearance: checkbox;
-  -moz-appearance: checkbox;
-  appearance: checkbox;
+     -moz-appearance: checkbox;
+          appearance: checkbox;
 }
 
 button {
   -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
+     -moz-appearance: button;
+          appearance: button;
   border-radius: 0;
 }
 
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-input[type="file"] {
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
   -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
+     -moz-appearance: button;
+          appearance: button;
   border-radius: 0;
 }
-input[type="search"]::-webkit-search-cancel-button {
+input[type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
@@ -143,8 +134,7 @@ body {
   background: #fff;
   font-size: 16px;
   line-height: 1.5;
-  font-family: "pretendard", "Noto Sans KR", "Malgun Gothic", "맑은 고딕",
-    sans-serif;
+  font-family: "pretendard", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #2b2b2b;
 }
 
@@ -159,8 +149,7 @@ a {
   color: #7b7b7b;
   text-decoration: none;
 }
-a:active,
-a:hover {
+a:active, a:hover {
   text-decoration: none;
 }
 
@@ -179,7 +168,7 @@ hr {
   display: none;
 }
 
-input[type="password"] {
+input[type=password] {
   font-family: "Malgun Gothic";
 }
 
@@ -448,7 +437,7 @@ legend {
 
 .logo a {
   display: block;
-  background: url(../../images/comm/logo.png) 0 0 / contain no-repeat;
+  background: url(../../images/comm/logo.png) 0 0/contain no-repeat;
   margin: 0 auto;
   text-indent: -9999px;
   width: 150px;
@@ -473,8 +462,7 @@ legend {
   text-align: center;
   z-index: 1;
 }
-.gnb nav .depth1 > li:hover::before,
-.gnb nav .depth1 > li.active2::before {
+.gnb nav .depth1 > li:hover::before, .gnb nav .depth1 > li.active2::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -483,8 +471,7 @@ legend {
   height: 4px;
   background: #fe2e00;
 }
-.gnb nav .depth1 > li:hover .depth2,
-.gnb nav .depth1 > li.active2 .depth2 {
+.gnb nav .depth1 > li:hover .depth2, .gnb nav .depth1 > li.active2 .depth2 {
   display: block;
 }
 .gnb nav .depth1 > li > a {
@@ -738,8 +725,7 @@ legend {
   display: block;
   margin-top: 15px;
 }
-#gnb-m .allmenu .depth2:before,
-#gnb-m .allmenu .depth2:after {
+#gnb-m .allmenu .depth2:before, #gnb-m .allmenu .depth2:after {
   clear: both;
   display: block;
   content: "";
@@ -864,7 +850,7 @@ legend {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .swiper {
@@ -953,7 +939,7 @@ legend {
   content: "";
   position: absolute;
 }
-.wrap-autoplay-control button[aria-pressed="false"]:before {
+.wrap-autoplay-control button[aria-pressed=false]:before {
   top: 4px;
   left: 4px;
   width: 12px;
@@ -962,7 +948,7 @@ legend {
   border-right: 3px solid #fff;
   box-sizing: border-box;
 }
-.wrap-autoplay-control button[aria-pressed="true"]:before {
+.wrap-autoplay-control button[aria-pressed=true]:before {
   top: 2px;
   left: 3px;
   border-top: 8px solid transparent;
@@ -992,11 +978,7 @@ legend {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.5)
-  );
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 }
 .slide-intro .swiper-slide a {
   display: block;
@@ -1007,7 +989,7 @@ legend {
   width: 100%;
   height: 1070px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .slide-intro .swiper-slide .slide-txt {
   position: absolute;
@@ -1286,7 +1268,7 @@ legend {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   height: 100%;
   box-sizing: border-box;
   transition: 0.5s;
@@ -1405,7 +1387,7 @@ legend {
   height: 100%;
   border-radius: 8px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   box-sizing: border-box;
   transition: transform 0.5s;
   transform: scale(1.02);
@@ -1583,7 +1565,7 @@ legend {
 .sub-news-section li a img {
   border-radius: 8px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -1961,7 +1943,7 @@ legend {
 .sns-app-wrap ul li a img {
   height: 80%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 744px) {
@@ -2007,7 +1989,7 @@ legend {
 .j-screen_wrap .j-screen .ani-logo img {
   width: 300px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .j-screen_wrap .j-screen .ani-motion {
   position: relative;
@@ -2063,7 +2045,7 @@ legend {
   height: 240px;
   border-radius: 10px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   box-sizing: border-box;
   transition: 0.5s;
   transform: scale(1.06);
@@ -2140,7 +2122,7 @@ legend {
   padding: 30px 0;
 }
 .container-sm dt {
-  color: #2b2b2b;
+  color: .container-sm dt tit;
   display: inline-block;
   font-size: 1.125rem;
   font-weight: 700;
@@ -2555,4 +2537,4 @@ legend {
 
 .swiper-thumbs {
   margin-top: 0.938rem;
-} /*# sourceMappingURL=comm.css.map */
+}/*# sourceMappingURL=comm.css.map */
